@@ -59,6 +59,15 @@ clickDeleteFirstAnimalBtn.addEventListener('click', () => {
 });
 
 // lijst met gespotte dieren leegmaken
+const clickDeleteAllAnimalsBtn = document.getElementById('remove-all-button');
+clickDeleteAllAnimalsBtn.addEventListener('click', () => {
+    const parent1 = document.getElementById("spotted-animals-list");
+    const numberOfLis = parent1.getElementsByTagName("li").length;
+    for (firstLi = 0; firstLi < numberOfLis; firstLi++) {
+        const child1 = parent1.getElementsByTagName("li")[0];
+        parent1.removeChild(child1);
+    };
+});
 
 
 
